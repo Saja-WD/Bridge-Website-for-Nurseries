@@ -1,0 +1,686 @@
+﻿
+/* ------------------------------------------ */
+/* Page layout styling */
+/* ------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+/*
+    To ensure the layout is responsive and works on smaller screens
+*/
+/* Adjusting for smaller screens */
+@media (max-width: 1024px) {
+    #daycare-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #daycare-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+
+/* ------------------------------------------ */
+/* Back Button Styling */
+/* ------------------------------------------ */
+.back-button {
+    position: fixed; /* Always stays at the top left even when scrolling */
+    top: 20px;
+    left: 20px;
+    background-color: transparent; /* Transparent background */
+    color: #2a9d8f; /* Text color matches the hover color */
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for color and scale */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+    /* Hover effect for the "Back Button" */
+    .back-button:hover {
+        background-color: #2a9d8f; /* Change to green color on hover */
+        color: white; /* Change text color to white on hover */
+        transform: scale(1.05); /* Slightly scale up the button */
+    }
+
+
+
+/* ------------------------------------------ */
+/* welcome section */
+/* ------------------------------------------ */
+#welcome-section {
+    background-color: #eaf4e7; /* Soft light green background */
+    padding: 40px 20px; /* Reduced padding to make the section smaller */
+    text-align: center;
+    color: #2a9d8f; /* Bright green color for text */
+}
+
+    #welcome-section h1 {
+        font-size: 2.5em; /* Reduced font size */
+        margin: 0;
+        padding: 0;
+        color: #2a9d8f; /* Bright green */
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase; /* All caps for emphasis */
+        letter-spacing: 2px; /* Reduced letter spacing */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Light shadow for text */
+        line-height: 1.2;
+        animation: fadeIn 2s ease-out;
+    }
+
+    #welcome-section .content {
+        max-width: 800px; /* Reduced max-width */
+        margin: 0 auto;
+        padding: 10px; /* Reduced padding */
+    }
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*  ----------------------- */
+/* Filter Section Styles */
+/* ------------------------ */
+#filter-section {
+    background-color: #e8f5e9; /* Light green background */
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.1);
+    max-width: 90%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* to make it responsive on small screens */
+}
+
+    #filter-section label {
+        font-weight: bold;
+        color: #2e7d32; /* Darker green text */
+        font-size: 15px;
+    }
+
+    #filter-section select {
+        padding: 8px 12px;
+        border: 1px solid #81c784; /* Medium green border */
+        border-radius: 8px;
+        background-color: white;
+        font-size: 14px;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+        color: #2e7d32;
+    }
+
+        #filter-section select:focus {
+            border-color: #388e3c; /* Focus darker green */
+            outline: none;
+        }
+
+#apply-filters {
+    background-color: #43a047; /* Main green button */
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    #apply-filters:hover {
+        background-color: #2e7d32; /* Darker green on hover */
+    }
+
+#clear-filters {
+    background-color: #a5d6a7; /* Lighter green button */
+    color: #2e7d32;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    #clear-filters:hover {
+        background-color: #81c784; /* Slightly darker on hover */
+    }
+
+
+/* ------------------------------------------ */
+/* Daycare Container Styling
+   (Grid Layout + Box Styling + Background)
+--------------------------------------------- */
+#daycare-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    gap: 20px; /* Space between each box */
+    margin-top: 2rem;
+    padding: 40px 10px; /* Padding inside the container */
+    background-color: white; /* White background for the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px #4a9e2f; /* Greenish soft shadow */
+}
+
+    /* ------------------------------------------ */
+    /* Individual Daycare Box Styling
+   (Box Layout + Animation Setup)
+--------------------------------------------- */
+    #daycare-container .box {
+        background-color: #f9f9f9; /* Light background for each box */
+        border: 2px solid #28a745; /* Green border */
+        border-radius: 12px; /* Smooth rounded corners */
+        padding: 20px; /* Inner spacing */
+        text-align: center; /* Center all text inside the box */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Light subtle shadow */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+        /* --- Animation Settings --- */
+        opacity: 0; /* Start hidden */
+        animation: fadeInUp 1.2s ease forwards; /* Play the fade-in animation */
+    }
+
+
+        /* Staggered Animation Delays
+   (Each box appears one after another) */
+        #daycare-container .box:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        #daycare-container .box:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        #daycare-container .box:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        #daycare-container .box:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        #daycare-container .box:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        #daycare-container .box:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+        #daycare-container .box:nth-child(7) {
+            animation-delay: 1.4s;
+        }
+
+        #daycare-container .box:nth-child(8) {
+            animation-delay: 1.6s;
+        }
+
+        #daycare-container .box:nth-child(9) {
+            animation-delay: 1.8s;
+        }
+
+        #daycare-container .box:nth-child(10) {
+            animation-delay: 2s;
+        }
+
+        #daycare-container .box:nth-child(11) {
+            animation-delay: 2.2s;
+        }
+
+
+
+
+/* Animation Keyframes: Fade In Up Effect
+   (Fade + Slide up smoothly)*/
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Start 30px lower */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+
+/* Logo Styling inside the Daycare Box*/
+#daycare-container .box .content .logo1 {
+    width: 80px; /* Logo size */
+    height: 80px;
+    border: 4px solid #F5F5F5; /* Light gray border around logo */
+    border-radius: 50%; /* Make the logo perfectly round */
+    object-fit: cover; /* Cover the area without distortion */
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 10px auto; /* Center logo and add spacing */
+}
+
+
+/* Daycare Name (Heading) Styling*/
+#daycare-container .box .content h2 {
+    margin-bottom: 8px;
+    color: #28a745; /* Fresh green color */
+    font-size: 18px; /* Medium heading size */
+    font-weight: bold;
+}
+
+
+/* Paragraphs inside the Box (Location and Price Styling)*/
+#daycare-container .box .content p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #555; /* Dark gray color for text */
+}
+
+    /* Icons inside the paragraphs (like location, price) */
+    #daycare-container .box .content p i {
+        color: #28a745; /* Match icon color to green theme */
+        margin-right: 6px; /* Space between icon and text */
+    }
+
+
+/* Modal Content (Inside Modal) - Only Icons*/
+#daycare-container .modal-content p i {
+    color: #4a90e2; /* Blueish color inside the modal info */
+    margin-right: 8px;
+}
+
+
+/* ------------------------------------------ */
+/* Star Rating System Styling */
+/* ------------------------------------------ */
+
+.star-rating-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+    .star-rating-container i {
+        transition: transform 0.2s ease;
+    }
+
+        .star-rating-container i.rated {
+            color: gold;
+        }
+
+        .star-rating-container i.clicked {
+            animation: bounce 0.4s;
+            color: gold;
+        }
+
+/* Star Bounce Animation */
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+/* ------------------------------------------ */
+/* "More Info" button styling */
+/* ------------------------------------------ */
+.more-info-btn {
+    margin-top: 15px; /* Adds space above the button */
+    padding: 8px 16px; /* Adds padding inside the button */
+    background-color: #28a745; /* New vibrant green background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for color and scale */
+}
+
+    /* Hover effect for the "More Info" button */
+    .more-info-btn:hover {
+        background-color: #218838; /* Darker green shade on hover */
+        transform: scale(1.1); /* Slightly enlarge the button when hovered */
+    }
+
+
+
+
+/* ------------------------------------------ */
+/* Modal background overlay */
+/* ------------------------------------------ */
+.modal {
+    display: none; /* Hide modal by default */
+    position: fixed;
+    z-index: 1000; /* High priority above everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Allow scrolling if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    padding: 20px;
+}
+
+/* ------------------------------------------ */
+/* Modal box content styling */
+/* ------------------------------------------ */
+.modal-content {
+    background-color: #fff; /* White modal background */
+    margin: 5% auto; /* Centered modal */
+    padding: 30px 20px; /* Inner spacing */
+    border-radius: 12px; /* Rounded corners */
+    width: 90%;
+    max-width: 500px; /* Limit maximum width */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Soft shadow */
+    animation: fadeSlideIn 0.8s ease-out; /* Entrance animation */
+}
+
+/* Modal content animation: Slide + Fade */
+@keyframes fadeSlideIn {
+    from {
+        transform: translateY(-40px); /* Start slightly higher */
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0); /* End in original position */
+        opacity: 1;
+    }
+}
+
+/* ------------------------------------------ */
+/* Daycare Box - Working Mothers Friendly */
+/* ------------------------------------------ */
+.daycare-box p span {
+    font-weight: bold;
+    color: #4a90e2; /* Light blue highlight */
+    font-size: 16px;
+}
+
+.daycare-box i.fas.fa-clock {
+    margin-right: 8px; /* Space after clock icon */
+    color: #4a90e2;
+}
+
+/* ------------------------------------------ */
+/* Photo Gallery Section */
+/* ------------------------------------------ */
+.gallery {
+    display: flex;
+    gap: 20px; /* Space between photo cards */
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap photos on small screens */
+    margin-top: 20px;
+}
+
+/* Each photo card */
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 135px;
+    position: relative;
+    transition: transform 0.3s ease; /* Smooth hover */
+}
+
+    /* Photo inside the card */
+    .photo-card img {
+        width: 135px;
+        height: 135px;
+        object-fit: cover; /* Crop the image nicely */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft photo shadow */
+        transition: transform 0.3s ease;
+    }
+
+        /* Zoom effect on hover */
+        .photo-card img:hover {
+            transform: scale(1.05);
+        }
+
+/* ------------------------------------------ */
+/* Feedback (Like, Dislike, Reset) Buttons */
+/* ------------------------------------------ */
+.feedback {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+    /* Style for like/dislike buttons */
+    .feedback button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        color: #4a90e2;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: color 0.3s, transform 0.2s ease;
+    }
+
+        /* Hover effect for feedback buttons */
+        .feedback button:hover {
+            transform: scale(1.15);
+            color: #357ABD; /* Slightly darker blue on hover */
+        }
+
+    /* Font size for icons inside buttons */
+    .feedback i {
+        font-size: 18px;
+    }
+
+/* ------------------------------------------ */
+/* Reset Button (↻) */
+/* ------------------------------------------ */
+.reset-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888; /* Default gray */
+    transition: transform 0.3s ease, color 0.3s;
+}
+
+    /* Hover effect for reset button */
+    .reset-btn:hover {
+        color: #333; /* Darker on hover */
+        transform: rotate(180deg); /* Spin effect */
+    }
+
+/* ------------------------------------------ */
+/* Emoji Pop Animation (for Like/Dislike feedback) */
+/* ------------------------------------------ */
+.emoji-pop {
+    position: absolute;
+    font-size: 24px;
+    animation: popEmoji 0.7s ease forwards;
+    pointer-events: none; /* Cannot click the emoji */
+    z-index: 2; /* Above other content */
+}
+
+/* Pop and fade away animation */
+@keyframes popEmoji {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-40px) scale(1.5);
+    }
+}
+
+/* ------------------------------------------ */
+/* Responsive adjustments for smaller screens */
+/* ------------------------------------------ */
+@media (max-width: 600px) {
+    .gallery {
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    .photo-card {
+        width: 120px; /* Slightly smaller cards */
+    }
+
+        .photo-card img {
+            width: 120px;
+            height: 120px;
+        }
+
+    .modal-content {
+        padding: 20px 15px; /* Slightly tighter padding on small screens */
+    }
+}
+
+
+/* =====================================
+   Layout and Structure for Contact Links
+   ===================================== */
+
+/* Contact links container: flex layout with space between items */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    padding: 0;
+}
+
+    /* List items inside (if used as <li> inside <ul> or <ol>) */
+    .contact-links li {
+        list-style: none;
+        text-align: center;
+    }
+
+    /* Contact link style: flex column, center align icon + text */
+    .contact-links a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+        color: inherit; /* Inherit text color from parent */
+    }
+
+    /* Icon style inside each contact link */
+    .contact-links i {
+        font-size: 26px;
+        margin-bottom: 6px; /* Space between icon and text */
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    /* Hover effect: scale up entire link */
+    .contact-links a:hover {
+        transform: scale(1.1);
+    }
+
+        /* Hover effect on icon: slight rotation */
+        .contact-links a:hover i {
+            transform: rotate(10deg);
+        }
+
+    /* =====================================
+   Color Styling for Specific Contact Links
+   ===================================== */
+
+    /* WhatsApp icon color */
+    .contact-links a[href*="wa.me"] i {
+        color: #25D366; /* WhatsApp green */
+    }
+
+    /* Instagram icon color */
+    .contact-links a[href*="instagram.com"] i {
+        color: #C13584; /* Instagram pink */
+    }
+
+    /* TikTok icon color */
+    .contact-links a[href*="tiktok.com"] i {
+        color: #000; /* TikTok black */
+    }
+
+    /* X App (formerly Twitter) icon color */
+    .contact-links a[href*="twitter.com"] i {
+        color: #000000; /* X App black */
+    }
+
+    /* Phone call icon color */
+    .contact-links a[href^="tel:"] i {
+        color: #34A853; /* Phone green */
+    }
+
+    /* Google Maps link (Visit Us) - optional color for globe icon */
+    .contact-links a[href*="google.com"] i,
+    .contact-links a[href*="goo.gl"] i {
+        color: #4285F4; /* Google Maps blue */
+    }
+
+/* Special class for X App links if needed */
+.xapp-link {
+    color: black;
+}
+
+/* =====================================
+   Text (Label) under Contact Icons
+   ===================================== */
+
+/* Text under the icons */
+.contact-links span {
+    color: #333;
+    font-size: 14px;
+    margin-top: 4px;
+    text-align: center;
+}
+
+
+/* Close button (X) */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .close-btn:hover {
+        color: #000;
+    }

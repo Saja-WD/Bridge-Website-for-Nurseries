@@ -1,0 +1,581 @@
+﻿<!DOCTYPE html>
+
+<html dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta  charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurseries</title>
+    <!-- Font Awesome for icons, The most recent updated virsion -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-..."
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+  
+    <link rel="stylesheet" href="Nurseries.css" />
+
+
+</head>
+<body>
+
+    <!--
+        Back Button
+    -->
+    <a href="../index/index.html" class="back-button">
+        ← Back
+    </a>
+
+
+    <!--
+      welcome section
+    -->
+    <section id="welcome-section" class="section">
+        <div class="content">
+            <h1>Hello, let's choose the new place for your child's happiness</h1>
+        </div>
+    </section>
+
+    <!--
+        Filter Section
+    -->
+    <div id="filter-section">
+        <label for="location-filter">Location</label>
+        <select id="location-filter">
+            <option value="">All Locations</option>
+            <option value="Jeddah">Jeddah</option>
+            <option value="Riyadh">Riyadh</option>
+            <option value="Abha">Abha</option>
+            <option value="Makkah">Makkah</option>
+            <option value="Al-Khobar">Al-Khobar</option>
+        </select>
+
+        <label for="price-filter">Price</label>
+        <select id="price-filter">
+            <option value="">Any Price</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+
+        <label for="mother-friendly-filter">Mother Friendly</label> 
+        <select id="mother-friendly-filter">
+            <option value="">Any</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <button id="apply-filters">Apply Filters</button>
+        <button id="clear-filters">Clean Filters</button>
+    </div>
+
+
+
+    <!--
+    ------------------------------
+    Nurseries Section
+    ------------------------------
+     -->
+
+    <section id="daycare-container" class="section" style="padding: 0; position: relative; overflow: hidden;">
+
+        <!--
+        ------------------------------
+        Daycare 1
+        ------------------------------
+         -->
+        <!--  Daycare 1 -->
+        <div class="box" data-id="daycare1" data-location="Jeddah" data-price="High">
+            <div class="content">
+                <img class="logo1" src="images/logo/daycare logo/UmmKhaledNursery.png" />
+                <h2>Umm Khaled Nursery</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Jeddah, KSA</p>
+                <p><i class="fas fa-dollar-sign"></i> 400 /month</p>
+                <!-- Star rating system-->
+                <!--Change the id for each daycare so it will be specisl-->
+                <!--The id name is soecial for each daycare-->
+                <div class="star-rating-container" data-daycare-id="daycare1">
+                    <div class="stars">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="user-rating">Not rated yet</div><!--Tjis will be displayed if the user did not rate the daycare yet-->
+                </div>
+                <!--The info in the daycare is special and different-->
+                <button class="more-info-btn"
+                        data-name="Umm Khaled Nursery"
+                        data-logo="images/logo/daycare logo/UmmKhaledNursery.png"
+                        data-location="Jeddah, KSA"
+                        data-price="400 /month"
+                        data-whatsapp="https://wa.me/0506746817"
+                        data-instagram=""
+                        data-tiktok=""
+                        data-phone=""
+                        data-xapp=""
+                        data-maplink="https://maps.app.goo.gl/5mWVj1xTzFCczeZ19">
+                    More Info
+                </button>
+                <!--for the phone dattel:0506746817-->
+            </div>
+        </div>
+
+        <!--  Daycare 2 -->
+        <div class="box">
+            <div class="content" data-id="daycare2" data-location="Riyadh" data-price="High">
+                <img class="logo1" src="images/logo/daycare logo/Arumah.png" />
+                <h2>Arumah Nursery</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Riyadh, KSA</p>
+                <p><i class="fas fa-dollar-sign"></i> 500/month</p>
+                <!-- Star rating system-->
+                <div class="star-rating-container" data-daycare-id="daycare2">
+                    <div class="stars">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="user-rating">Not rated yet</div>
+                </div>
+
+                <button class="more-info-btn"
+                        data-name="Arumah Nursery"
+                        data-logo="images/logo/daycare logo/Arumah.png"
+                        data-location="Riyadh, KSA"
+                        data-price="500 /month"
+                        data-whatsapp="https://wa.me/050238383"
+                        data-instagram="https://www.instagram.com/arumahpreschool/?hl=ar"
+                        data-tiktok=""
+                        data-phone=""
+                        data-xapp=""
+                        data-maplink="https://maps.app.goo.gl/D27bJyQCCfDcCSuU8">
+                    More Info
+                </button>
+
+            </div>
+        </div>
+
+        <!--  Daycare 3 -->
+        <div class="box">
+            <div class="content" data-id="daycare3" data-location="Jeddah" data-price="Low">
+                <img class="logo1" src="images/logo/daycare logo/HappyMinds.png" />
+                <h2>Happy Minds Nursery</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Jeddah, KSA</p>
+                <p><i class="fas fa-dollar-sign"></i> 250/month</p>
+                <!-- Star rating system-->
+                <div class="star-rating-container" data-daycare-id="daycare3">
+                    <div class="stars">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="user-rating">Not rated yet</div>
+                </div>
+
+                <button class="more-info-btn"
+                        data-name="Happy Minds Nursery"
+                        data-logo="images/logo/daycare logo/HappyMinds.png"
+                        data-location="Jeddah, KSA"
+                        data-price="250 /month"
+                        data-whatsapp="https://wa.me/0558886533"
+                        data-instagram="https://www.instagram.com/mindshappyy/"
+                        data-tiktok="https://www.tiktok.com/discover/%D8%AD%D8%B6%D8%A7%D9%86%D8%A9%C2%A0%D8%A7%D9%84%D8%B9%D9%82%D9%88%D9%84%C2%A0%D8%A7%D9%84%D8%B3%D8%B9%D9%8A%D8%AF%D8%A9"
+                        data-phone="7"
+                        data-xapp=""
+                        data-maplink="https://maps.app.goo.gl/qMxwdRUeUCvBM7Xu9">
+                    More Info
+                </button>
+
+            </div>
+        </div>
+
+
+        <!--  Daycare 4 -->
+        <div class="box" data-id="daycare4" data-location="Abha" data-price="Low"  data-motherfriendly="Yes">
+            <div class="content">
+                <img class="logo1" src="images/logo/daycare logo/Game&Zahher.png" />
+                <h2>Game and Zaher Nursery </h2>
+                <p><i class="fas fa-map-marker-alt"></i> Abha, KSA</p>
+                <p><i class="fas fa-dollar-sign"></i> 250/month</p>
+                <!-- Working Mothers Friendly -->
+                <p><strong>Working Mothers Friendly</strong> <i class="fas fa-clock"></i> <span>8am - 5pm</span></p>
+                <!-- Star rating system-->
+                <div class="star-rating-container" data-daycare-id="daycare4">
+                    <div class="stars">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="user-rating">Not rated yet</div>
+                </div>
+
+                <button class="more-info-btn"
+                        data-name="Game and Zaher Nursery"
+                        data-logo="images/logo/daycare logo/Game&Zahher.png"
+                        data-location="Abha, KSA"
+                        data-price="350 /month"
+                        data-whatsapp="https://wa.me/0509721561"
+                        data-instagram=""
+                        data-tiktok="https://x.com/arumahpreschool?lang=ar"
+                        data-phone=""
+                        data-xapp=""
+                        data-maplink="https://maps.app.goo.gl/eku17nZWrubA1Q9q7">
+                    More Info
+                </button>
+
+
+            </div>
+        </div>
+
+        <!--  Daycare 5 -->
+        <div class="box" data-id="daycare5" data-location="Abha" data-price="Medium">
+            <div class="content">
+                <img class="logo1" src="images/logo/daycare logo/LittleWings2.png" />
+                <h2>Little Wings Nursery </h2>
+                <p><i class="fas fa-map-marker-alt"></i> Abha, KSA</p>
+                <p><i class="fas fa-dollar-sign"></i> 350/month</p>
+                <!-- Star rating system-->
+                <div class="star-rating-container" data-daycare-id="daycare5">
+                    <div class="stars">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="user-rating">Not rated yet</div>
+                </div>
+
+                <button class="more-info-btn"
+                        data-name="Game and Zaher Nursery"
+                        data-logo="images/logo/daycare logo/LittleWings2.png"
+                        data-location="Abha, KSA"
+                        data-price="350 /month"
+                        data-whatsapp=""
+                        data-instagram="https://www.instagram.com/kids_daycare/?hl=ar"
+                        data-tiktok=""
+                        data-phone="tel:17231695"
+                        data-xapp=""
+                        data-maplink="https://maps.app.goo.gl/QuzbjxRhB7DzNfTSA">
+                    More Info
+                </button>
+
+            </div>
+        </div>
+
+        <!--  Daycare 6 -->
+        <div class="box" data-id="daycare6" data-location="Makkah" data-price="Medium">
+            <div class="content">
+                <img class="logo1" src="images/logo/daycare logo/MyFirstYear.png" />
+                <h2>My First Year Nursery </h2>
+                <p><i class="fas fa-map-marker-alt"></i> Makkah, KSA</p>
+                <p><i class="fas fa-dollar-sign"></i> 350/month</p>
+                <!-- Star rating system-->
+                <div class="star-rating-container" data-daycare-id="daycare6">
+                    <div class="stars">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="user-rating">Not rated yet</div>
+                </div>
+
+                <button class="more-info-btn"
+                        data-name="My First Year Nursery"
+                        data-logo="images/logo/daycare logo/MyFirstYear.png"
+                        data-location="Makkah, KSA"
+                        data-price="350 /month"
+                        data-whatsapp="https://wa.me/0550507379"
+                        data-instagram="https://www.instagram.com/first1yearcenter/?hl=ar"
+                        data-tiktok=""
+                        data-phone=""
+                        data-xapp="https://x.com/first1year?lang=ar"
+                        data-maplink="https://maps.app.goo.gl/pz7DKHU1N59aoyJ8A">
+                    More Info
+                </button>
+
+            </div>
+        </div>
+
+        <!--  Daycare 7 -->
+        <div class="box" data-id="daycare7" data-location="Al-Khobar" data-price="Medium"  data-motherfriendly="Yes">
+            <div class="content">
+                <img class="logo1" src="images/logo/daycare logo/FelthatCenter.png" />
+                <h2>Flthat Nursery Center </h2>
+                <p><i class="fas fa-map-marker-alt"></i> Al-Khobar, KSA</p>
+                <p><i class="fas fa-dollar-sign"></i> 300/month</p>
+                <!-- Working Mothers Friendly -->
+                <p><strong>Working Mothers Friendly</strong> <i class="fas fa-clock"></i> <span>8am - 5pm</span></p>
+                <!-- Star rating system-->
+                <div class="star-rating-container" data-daycare-id="daycare7">
+                    <div class="stars">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="user-rating">Not rated yet</div>
+                </div>
+
+                <button class="more-info-btn"
+                        data-name="Flthat Nursery Center"
+                        data-logo="images/logo/daycare logo/FelthatCenter.png"
+                        data-location="Al-Khobar, KSA"
+                        data-price="300 /month"
+                        data-whatsapp="https://wa.me/138325511"
+                        data-instagram="https://www.instagram.com/falathat.center/?hl=ar"
+                        data-tiktok=""
+                        data-phone=""
+                        data-xapp="https://x.com/falatht1?lang=ar"
+                        data-maplink="https://maps.app.goo.gl/9vrRLNs3yToJWr9M9">
+                    More Info
+                </button>
+
+            </div>
+        </div>
+
+        <!--  Daycare 8 -->
+        <div class="box" data-id="daycare8" data-location="Jeddah" data-price="Medium">
+            <div class="content">
+                <img class="logo1" src="images/logo/daycare logo/KidsTent.png" />
+                <h2>Child Tent Center </h2>
+                <p><i class="fas fa-map-marker-alt"></i> Jeddah, KSA</p>
+                <p><i class="fas fa-dollar-sign"></i> 300/month</p>
+                <!-- Star rating system-->
+                <div class="star-rating-container" data-daycare-id="daycare8">
+                    <div class="stars">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="user-rating">Not rated yet</div>
+                </div>
+
+                <button class="more-info-btn"
+                        data-name="Child Tent Center"
+                        data-logo="images/logo/daycare logo/KidsTent.png"
+                        data-location="Jeddah,KSA"
+                        data-price="300 /month"
+                        data-whatsapp="https://wa.me/0558166952"
+                        data-instagram="https://www.instagram.com/kidstent.sa/?hl=ar"
+                        data-tiktok=""
+                        data-phone=""
+                        data-xapp=""data-maplink="https://maps.app.goo.gl/q7VS1oUPBJKqBrF7A">
+                    More Info
+                </button>
+
+            </div>
+        </div>
+
+        <!--  Daycare 9 -->
+        <div class="box" data-id="daycare9" data-location="Al-Khobar" data-price="Medium">
+            <div class="content">
+                <img class="logo1" src="images/logo/daycare logo/TinyToes.png" />
+                <h2>Tiny Toes Nursery </h2>
+                <p><i class="fas fa-map-marker-alt"></i> Al-Khobar, KSA</p>
+                <p><i class="fas fa-dollar-sign"></i> 300/month</p>
+                <!-- Star rating system-->
+                <div class="star-rating-container" data-daycare-id="daycare9">
+                    <div class="stars">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="user-rating">Not rated yet</div>
+                </div>
+
+                <button class="more-info-btn"
+                        data-name="Tiny Toes Nursery"
+                        data-logo="images/logo/daycare logo/TinyToes.png"
+                        data-location="Al-Khobar,KSA"
+                        data-price="300 /month"
+                        data-whatsapp="https://wa.me/0532179606"
+                        data-instagram="https://www.instagram.com/mytinytoes_/?hl=ar"
+                        data-tiktok=""
+                        data-phone=""
+                        data-xapp=""data-maplink="https://maps.app.goo.gl/aAp7A4qf3d25t3MT9">
+                    More Info
+                </button>
+
+            </div>
+        </div>
+
+        <!--  Daycare 10 -->
+        <div class="box" data-id="daycare10" data-location="Riyadh" data-price="Low"  data-motherfriendly="Yes">
+            <div class="content">
+                <img class="logo1" src="images/logo/daycare logo/ChildDevelopment.png" />
+                <h2>Child Development Center
+                </h2>
+                <p><i class="fas fa-map-marker-alt"></i> Riyadh, KSA</p>
+                <p><i class="fas fa-dollar-sign"></i> 200/month</p>
+                <!-- Working Mothers Friendly -->
+                <p><strong>Working Mothers Friendly</strong> <i class="fas fa-clock"></i> <span>8am - 5pm</span></p>
+                <!-- Star rating system-->
+                <div class="star-rating-container" data-daycare-id="daycare10">
+                    <div class="stars">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="user-rating">Not rated yet</div>
+                </div>
+
+                <button class="more-info-btn"
+                        data-name="Tiny Toes Nursery"
+                        data-logo="images/logo/daycare logo/ChildDevelopment.png"
+                        data-location="Riyadh, KSA"
+                        data-price="200 /month"
+                        data-whatsapp="https://wa.me/0580717202"
+                        data-instagram="https://www.instagram.com/nmaachild/?hl=ar"
+                        data-tiktok=""
+                        data-phone=""
+                        data-xapp=""data-maplink="https://maps.app.goo.gl/MqfhrHjwipnCVGyGA">
+                    More Info
+                </button>
+
+            </div>
+        </div>
+
+        <!--  Daycare 11 -->
+        <div class="box" data-id="daycare11" data-location="Jeddah" data-price="High">
+            <div class="content">
+                <img class="logo1" src="images/logo/daycare logo/UniverseBuds.png" />
+                <h2>Universe Buds Center </h2>
+                <p><i class="fas fa-map-marker-alt"></i> Jeddah, KSA</p>
+                <p><i class="fas fa-dollar-sign"></i> 400/month</p>
+                <!-- Star rating system-->
+                <div class="star-rating-container" data-daycare-id="daycare11">
+                    <div class="stars">
+                        <i class="fas fa-star" data-value="1"></i>
+                        <i class="fas fa-star" data-value="2"></i>
+                        <i class="fas fa-star" data-value="3"></i>
+                        <i class="fas fa-star" data-value="4"></i>
+                        <i class="fas fa-star" data-value="5"></i>
+                    </div>
+                    <div class="user-rating">Not rated yet</div>
+                </div>
+
+                <button class="more-info-btn"
+                        data-name="Universe Buds Center"
+                        data-logo="images/logo/daycare logo/UniverseBuds.png"
+                        data-location="Jeddah, KSA"
+                        data-price="400 /month"
+                        data-whatsapp="https://wa.me/0568799687"
+                        data-instagram="https://www.instagram.com/universe.buds/"
+                        data-tiktok=""
+                        data-phone=""
+                        data-xapp=""data-maplink="https://maps.app.goo.gl/8WDrL3o4VU5sxYNZ7">
+                    More Info
+                </button>
+
+            </div>
+        </div>
+
+
+
+
+        <!--
+         ------------------------
+           Modal Structure
+         ------------------------
+        -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+
+                <br />
+                <!-- Dynamic Daycare Name -->
+                <h3 id="modal-daycare-name">Daycare Name</h3>
+
+                <!-- Dynamic Daycare Logo --><br />
+                <img id="modal-daycare-logo" src="images/default-logo.png" alt="Daycare Logo" width="150">
+
+                <!-- Location and Price --><br />
+                <p id="modal-location"><i class="fas fa-map-marker-alt"></i> Location</p><br />
+                <p id="modal-price"><i class="fas fa-dollar-sign"></i> Price</p><br />
+
+                <!-- Photo Gallery (shared across all daycares) --><br />
+                <section id="photo-gallery">
+                    <h2>Our Daycare in Action</h2><br />
+                    <div class="gallery">
+                        <br />
+                        <div class="photo-card" data-id="photo1">
+                            <img src="images/photoGallery/PictureGallery-1.jpg" alt="Kids playing with blocks">
+                            <div class="feedback">
+                                <button class="like-btn"><i class="fas fa-thumbs-up"></i> <span>0</span></button>
+                                <button class="dislike-btn"><i class="fas fa-thumbs-down"></i> <span>0</span></button>
+                                <button class="reset-btn" title="Reset">&#x21bb;</button>
+                            </div>
+                        </div>
+
+                        <div class="photo-card" data-id="photo2">
+                            <img src="images/photoGallery/PictureGallery-2.jpg" alt="Kids playing with blocks">
+                            <div class="feedback">
+                                <button class="like-btn"><i class="fas fa-thumbs-up"></i> <span>0</span></button>
+                                <button class="dislike-btn"><i class="fas fa-thumbs-down"></i> <span>0</span></button>
+                                <button class="reset-btn" title="Reset">&#x21bb;</button>
+                            </div>
+                        </div>
+                        <div class="photo-card" data-id="photo3">
+                            <img src="images/photoGallery/PictureGallery-3.jpg" alt="Kids playing with blocks">
+                            <div class="feedback">
+                                <button class="like-btn"><i class="fas fa-thumbs-up"></i> <span>0</span></button>
+                                <button class="dislike-btn"><i class="fas fa-thumbs-down"></i> <span>0</span></button>
+                                <button class="reset-btn" title="Reset">&#x21bb;</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <br />
+                <!-- Contact Links -->
+                <div class="contact-links">
+                    <h2>Contact Us</h2>
+                    <a id="modal-whatsapp" class="contact-icon" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i><br><span>WhatsApp</span>
+                    </a>
+                    <a id="modal-instagram" class="contact-icon" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i><br><span>Instagram</span>
+                    </a>
+                    <a id="modal-tiktok" class="contact-icon" target="_blank" title="TikTok">
+                        <i class="fab fa-tiktok"></i><br><span>TikTok</span>
+                    </a>
+                    <a id="modal-phone" class="contact-icon" target="_blank" title="Phone">
+                        <i class="fas fa-phone"></i><br><span>Phone</span>
+                    </a>
+                    <a id="modal-xapp" class="contact-icon" target="_blank" title="X App">
+                        <i class="fab fa-x-twitter"></i><br><span>X App</span>
+                    </a>
+                    <a id="modal-map" class="contact-icon" target="_blank" title="Visit Us">
+                        <i class="fas fa-globe"></i><br><span>Visit Us</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Link to JavaScript -->
+
+    <script src="Nurseries.js"></script>
+
+</body>
+</html>
+
+
+

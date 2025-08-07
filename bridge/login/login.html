@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <form class="form-container" method="POST" action="login_process.php">
+        <!-- الشعار -->
+        <header class="logo-container">
+            <img src="Brown Black Simple Minimalist Construction Logo.png" alt="Bridge Logo" class="logo">
+        </header>
+
+        <!-- حقل البريد الإلكتروني -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <!-- حقل كلمة المرور -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <!-- زر تسجيل الدخول -->
+        <button type="submit">Login</button>
+
+        <!-- رابط التسجيل -->
+        <div class="sign-up-link">
+            <span>Don't have an account?</span>
+            <a href="../signup/signup.html">Sign in</a>
+
+
+        </div>
+    </form>
+</body>
+</html>
